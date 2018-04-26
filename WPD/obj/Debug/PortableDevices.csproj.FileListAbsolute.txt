@@ -1,0 +1,11 @@
+C:\Users\dunca\documents\visual studio 2015\Projects\WPD\WPD\bin\Debug\WPD.exe.config
+C:\Users\dunca\documents\visual studio 2015\Projects\WPD\WPD\bin\Debug\WPD.exe
+C:\Users\dunca\documents\visual studio 2015\Projects\WPD\WPD\bin\Debug\WPD.pdb
+C:\Users\dunca\documents\visual studio 2015\Projects\WPD\WPD\bin\Debug\Interop.PortableDeviceApiLib.dll
+C:\Users\dunca\documents\visual studio 2015\Projects\WPD\WPD\bin\Debug\Interop.PortableDeviceTypesLib.dll
+C:\Users\dunca\documents\visual studio 2015\Projects\WPD\WPD\obj\Debug\PortableDevices.csprojResolveAssemblyReference.cache
+C:\Users\dunca\documents\visual studio 2015\Projects\WPD\WPD\obj\Debug\Interop.PortableDeviceApiLib.dll
+C:\Users\dunca\documents\visual studio 2015\Projects\WPD\WPD\obj\Debug\Interop.PortableDeviceTypesLib.dll
+C:\Users\dunca\documents\visual studio 2015\Projects\WPD\WPD\obj\Debug\PortableDevices.csproj.ResolveComReference.cache
+C:\Users\dunca\documents\visual studio 2015\Projects\WPD\WPD\obj\Debug\WPD.exe
+C:\Users\dunca\documents\visual studio 2015\Projects\WPD\WPD\obj\Debug\WPD.pdb
