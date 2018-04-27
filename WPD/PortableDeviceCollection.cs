@@ -13,8 +13,10 @@ namespace WPD
     //instance of the PortableDeviceManager type which can be found in the PortableDeviceApi 1.0 Type lib
     public class PortableDeviceCollection : Collection<PortableDevice>
     {
+        //found in portable device api 1.0 type library
         private readonly PortableDeviceManager _deviceManager;
 
+        //contructor
         public PortableDeviceCollection()
         {
             this._deviceManager = new PortableDeviceManager();
@@ -37,7 +39,7 @@ namespace WPD
                 this._deviceManager.GetDevices(ref deviceIds[0], ref count);
             } catch (System.IndexOutOfRangeException e1)
             {
-                Console.WriteLine("Error: " + e1 + " \nMaybe no devices are connected?");
+                Console.WriteLine("Error: " + e1 + " \nHint: Maybe no devices are connected?");
             }
             foreach (var deviceId in deviceIds)
             {

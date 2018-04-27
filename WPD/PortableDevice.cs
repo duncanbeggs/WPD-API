@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;//used for Path object which provides functionality for navigating file structures
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,11 +16,9 @@ namespace WPD
         private bool _isConnected;
         private readonly PortableDeviceClass _device;
 
-        public string DeviceId { get; set; }
-
-
+        public string DeviceId { get; set; } 
        
-
+        //constructor
         public PortableDevice(string deviceId)
         {
             //when an object of this class (PortableDevice) is instantiated it creates an instance of the PortableDeviceClass type
@@ -162,5 +161,56 @@ namespace WPD
 
             return new PortableDeviceFile(objectId, name);
         }
+
+        //The two paramaters are the file to transfer and a folder in which to save it. Each file
+        //is wrapped in an instance of the PortableDeviceFile type which is a wrapper we created
+        //to represent a file residing on a WPD-compatible device
+        public void DownloadFile(PortableDeviceFile file, string saveToPath)
+        {
+            //to access content specific methods
+            IPortableDeviceContent content;
+            this._device.Content(out content);
+
+            //allows access to resource-specific methods (note: what is diff between resource and content methods?)
+            IPortableDeviceResources resources;
+            content.Transfer(out resources);
+
+            //create IStream stream object to read data from device
+            PortableDeviceApiLib.IStream wpdStream;
+            uint optimalTransferSize = 0;
+
+            var property = new PortableDeviceApiLib._tagpropertykey();
+            property.fmtid = new Guid(0xE81E79BE, 0x34F0, 0x41BF, 0xB5, 0x3F,
+                                      0xF1, 0xA0, 0x6A, 0xE8, 0x78, 0x42);
+
+            property.pid = 0;
+
+            resources.GetStream(file.Id, ref property, 0, ref optimalTransferSize, out wpdStream);
+
+            System.Runtime.InteropServices.ComTypes.IStream sourceStream =
+                (System.Runtime.InteropServices.ComTypes.IStream)wpdStream;
+
+
+            //the below code uses pointer magic so will need to have "Allow unsafe code" checked in the 
+            //project's build options
+            var filename = Path.GetFileName(file.Id);
+            FileStream targetStream = new FileStream(Path.Combine(saveToPath, filename),
+                FileMode.Create, FileAccess.Write);
+
+            unsafe
+            {
+                var buffer = new byte[1024];
+                int bytesRead;
+                do
+                {
+                    sourceStream.Read(buffer, 1024, new IntPtr(&bytesRead));
+                    targetStream.Write(buffer, 0, 1024);
+                } while (bytesRead > 0);
+
+                targetStream.Close();
+            }
+
+        }
+
     }
 }

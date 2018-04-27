@@ -10,7 +10,7 @@ namespace WPD
     //any classes that derive from this class. The word "abstract" makes intuitive sense in this case.
     public abstract class PortableDeviceObject
     {
-        protected PortableDeviceObject(string id, string name)
+        public PortableDeviceObject(string id, string name)
         {
             this.Id = id;
             this.Name = name;

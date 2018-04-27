@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace WPD
 {
     //file has both a name and an ID
-    class PortableDeviceFile : PortableDeviceObject
+    public class PortableDeviceFile : PortableDeviceObject
     {
         public PortableDeviceFile(string id, string name) : base(id, name)
         {
