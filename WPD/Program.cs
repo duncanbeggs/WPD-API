@@ -30,7 +30,7 @@ namespace WPD
                     if ( item is PortableDeviceFile )
                     {
                         Console.WriteLine("Copying file " + item.Name);
-                        device.DownloadFile((PortableDeviceFile)item, @"D:\Users\Duncan\Videos\Hitachi Videos");
+                        device.DownloadFile((PortableDeviceFile)item, @"C:\Users\Q12710\Documents");
                     }
                 }
                 device.Disconnect();
