@@ -9,3 +9,14 @@ C:\Users\dunca\documents\visual studio 2015\Projects\WPD\WPD\obj\Debug\PortableD
 C:\Users\dunca\documents\visual studio 2015\Projects\WPD\WPD\obj\Debug\WPD.exe
 C:\Users\dunca\documents\visual studio 2015\Projects\WPD\WPD\obj\Debug\WPD.pdb
 C:\Users\dunca\documents\visual studio 2015\Projects\WPD\WPD\obj\Debug\PortableDevices.csprojResolveAssemblyReference.cache
+C:\Users\dbeggs\source\repos\WPD-API\WPD\bin\Debug\WPD.exe.config
+C:\Users\dbeggs\source\repos\WPD-API\WPD\bin\Debug\WPD.exe
+C:\Users\dbeggs\source\repos\WPD-API\WPD\bin\Debug\WPD.pdb
+C:\Users\dbeggs\source\repos\WPD-API\WPD\bin\Debug\Interop.PortableDeviceApiLib.dll
+C:\Users\dbeggs\source\repos\WPD-API\WPD\bin\Debug\Interop.PortableDeviceTypesLib.dll
+C:\Users\dbeggs\source\repos\WPD-API\WPD\obj\Debug\Interop.PortableDeviceApiLib.dll
+C:\Users\dbeggs\source\repos\WPD-API\WPD\obj\Debug\Interop.PortableDeviceTypesLib.dll
+C:\Users\dbeggs\source\repos\WPD-API\WPD\obj\Debug\PortableDevices.csproj.ResolveComReference.cache
+C:\Users\dbeggs\source\repos\WPD-API\WPD\obj\Debug\PortableDevices.csproj.CoreCompileInputs.cache
+C:\Users\dbeggs\source\repos\WPD-API\WPD\obj\Debug\WPD.exe
+C:\Users\dbeggs\source\repos\WPD-API\WPD\obj\Debug\WPD.pdb
